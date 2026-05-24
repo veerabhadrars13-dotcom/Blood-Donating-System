@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RaktSetu | Blood Bridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="particles"></div>
+    <header class="header">
+      <a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 7.1 5 10.7 5 15a7 7 0 0 0 14 0c0-4.3-3-7.9-7-13Z"/></svg></span>RaktSetu</a>
+      <nav class="nav">
+        <a class="active" href="index.html">Home</a><a href="find-blood.html">Find Blood</a><a href="hospitals.html">Hospitals</a><a href="register.html">Donate</a><a href="login.html">Login</a><a href="register.html">Register</a>
+      </nav>
+      <a class="bell" href="notifications.html" aria-label="Notifications"><i data-lucide="bell"></i></a>
+      <button class="mobile-toggle" aria-label="Menu"><i data-lucide="menu"></i></button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">India-wide emergency blood bridge</div>
+          <h1>Every Drop Counts. Be Someone's Hero.</h1>
+          <p>RaktSetu connects verified donors, hospitals, and urgent recipients in minutes with live blood availability, OTP-verified profiles, emergency broadcasts, and trusted hospital stock updates.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="register.html"><i data-lucide="user-plus"></i>Register as Donor</a>
+            <a class="btn gold" href="find-blood.html"><i data-lucide="search"></i>Find Blood Now</a>
+            <a class="btn" href="admin.html"><i data-lucide="shield-plus"></i>Hospital Portal</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="drop-stage">
+            <svg class="big-drop" viewBox="0 0 260 330" aria-hidden="true">
+              <defs>
+                <radialGradient id="dropGlow" cx="38%" cy="26%" r="72%">
+                  <stop offset="0" stop-color="#fff" stop-opacity=".9"/>
+                  <stop offset=".2" stop-color="#ff8a8a"/>
+                  <stop offset=".58" stop-color="#ff2d2d"/>
+                  <stop offset="1" stop-color="#710000"/>
+                </radialGradient>
+              </defs>
+              <path fill="url(#dropGlow)" d="M130 9C76 79 35 132 35 197c0 69 43 119 95 119s95-50 95-119C225 132 184 79 130 9Z"/>
+              <path fill="rgba(255,255,255,.28)" d="M91 95c-22 34-35 66-35 97 0 23 7 44 20 61-2-60 26-95 66-152 8-11-24-48-51-6Z"/>
+            </svg>
+            <div class="counter-card">
+              <div class="counter"><strong data-count="1842">0</strong><span>lives saved today</span></div>
+              <svg class="heartbeat" viewBox="0 0 520 70"><polyline points="0,36 70,36 90,36 108,18 132,56 154,12 180,36 250,36 270,36 290,22 312,49 334,36 520,36"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="stats-bar">
+        <div class="stat"><span>Total Donors</span><strong data-count="126408">0</strong></div>
+        <div class="stat"><span>Hospitals Covered</span><strong data-count="842">0</strong></div>
+        <div class="stat"><span>Units Available Today</span><strong data-count="9186">0</strong></div>
+        <div class="stat"><span>Emergency Matches</span><strong data-count="316">0</strong></div>
+      </section>
+      <section class="page feature-band">
+        <div class="page-head">
+          <div>
+            <div class="eyebrow">Life-saving workflow</div>
+            <h2>Find Blood Instantly</h2>
+            <p>Real-time blood availability should come from verified live sources. RaktSetu is wired with demo data and quick links to official e-RaktKosh availability for current stock checks.</p>
+          </div>
+          <button class="btn gold" data-open-live><i data-lucide="external-link"></i>Open Live e-RaktKosh</button>
+        </div>
+        <div class="grid three">
+          <article class="glass-card"><h3>Interactive India Map</h3><p>Live-style hospital markers show shortage, low stock, available stock, contact numbers, and directions.</p></article>
+          <article class="glass-card"><h3>WhatsApp & SMS Alerts</h3><p>Alert previews and WhatsApp share links are ready. Production SMS/WhatsApp delivery needs a backend provider.</p></article>
+          <article class="glass-card"><h3>Secure & Verified</h3><p>OTP registration, encrypted-data messaging, DPDP consent, JWT-ready auth, and session protection are represented in the UI.</p></article>
+          <article class="glass-card"><h3>Donor Dashboard</h3><p>Donation history, health stats, eligibility, rewards, certificates, and upcoming nearby drives.</p></article>
+          <article class="glass-card"><h3>Hospital Portal</h3><p>Stock updates, broadcast alerts, donor management, reports, and admin metrics for hospital teams.</p></article>
+          <article class="glass-card"><h3>Karnataka Coverage</h3><p>All Karnataka districts are available in dropdowns, with expanded sample blood banks across Bengaluru, Mysuru, Mangaluru, Hubballi, Belagavi, Kalaburagi, Shivamogga, Ballari, and Udupi.</p></article>
+        </div>
+      </section>
+      <section class="page feature-band">
+        <div class="page-head">
+          <div>
+            <div class="eyebrow">Secure registration & authentication</div>
+            <h2>Dual verified onboarding</h2>
+          </div>
+          <a class="btn primary" href="register.html"><i data-lucide="user-check"></i>Start Registration</a>
+        </div>
+        <div class="grid four">
+          <article class="glass-card"><h3>Personal Details</h3><p>Full name, date of birth, blood group, gender, and health declaration.</p></article>
+          <article class="glass-card"><h3>Email Verification</h3><p>Real email field, inbox OTP flow, and secure verification messaging.</p></article>
+          <article class="glass-card"><h3>Mobile OTP</h3><p>Phone entry, six-digit OTP boxes, 60 second countdown, and resend action.</p></article>
+          <article class="glass-card"><h3>Location & ID</h3><p>State, district, city, Aadhaar/PAN upload, DPDP consent, AES-256 security notice, and biometric-ready login UI.</p></article>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span>HTTPS enforced | TLS 1.3 | AES-256 at rest</span><span>JWT auth, CSRF forms, refresh tokens, DPDP consent ready</span></footer>
+    <nav class="bottom-nav"><a class="active" href="index.html">Home</a><a href="find-blood.html">Find</a><a href="register.html">Donate</a><a href="dashboard.html">Profile</a></nav>
+  </div>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="app.js"></script>
+</body>
+</html>

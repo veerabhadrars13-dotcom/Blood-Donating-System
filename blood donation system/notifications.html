@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notifications | RaktSetu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="particles"></div>
+  <header class="header">
+    <a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 7.1 5 10.7 5 15a7 7 0 0 0 14 0c0-4.3-3-7.9-7-13Z"/></svg></span>RaktSetu</a>
+    <nav class="nav"><a href="index.html">Home</a><a href="find-blood.html">Find Blood</a><a href="hospitals.html">Hospitals</a><a href="register.html">Donate</a><a href="login.html">Login</a></nav>
+    <a class="bell" href="notifications.html"><i data-lucide="bell"></i></a>
+    <button class="mobile-toggle"><i data-lucide="menu"></i></button>
+  </header>
+
+  <main class="page">
+    <div class="page-head"><div><div class="eyebrow">Emergency broadcasts</div><h1>Notification settings.</h1></div></div>
+    <div class="grid two">
+      <section class="glass-card">
+        <h3>Channels</h3>
+        <label class="switch"><span>WhatsApp Notifications</span><input type="checkbox" checked></label>
+        <div class="field"><label>WhatsApp number</label><input data-whatsapp-number type="tel" placeholder="+91 98765 43210"></div>
+        <button class="btn" data-verify-whatsapp>Verify WhatsApp OTP</button>
+        <label class="switch"><span>SMS Notifications</span><input type="checkbox" checked></label>
+        <div class="field"><label>SMS number</label><input data-sms-number type="tel" placeholder="+91 98765 43210"></div>
+        <button class="btn primary" data-send-test-sms>Send test SMS</button>
+        <label class="switch"><span>Email Notifications</span><input type="checkbox" checked></label>
+        <label class="switch"><span>Push Notifications</span><input type="checkbox"></label>
+        <p class="chip" data-sms-status>SMS gateway not connected</p>
+      </section>
+
+      <section class="glass-card">
+        <h3>Subscribe to</h3>
+        <label class="switch"><span>Blood urgently needed near you</span><input type="checkbox" checked></label>
+        <label class="switch"><span>Your group critically low in your city</span><input type="checkbox" checked></label>
+        <label class="switch"><span>Upcoming blood drive in your area</span><input type="checkbox"></label>
+        <label class="switch"><span>Donation reminder after 3 months</span><input type="checkbox" checked></label>
+        <label class="switch"><span>Request fulfilled confirmation</span><input type="checkbox" checked></label>
+        <div class="field"><label>Frequency</label><select><option>Instant</option><option>Daily digest</option><option>Weekly</option></select></div>
+      </section>
+
+      <section class="glass-card preview"><h3>WhatsApp Preview</h3><p>URGENT: O- blood needed at AIIMS Delhi. Can you help? Click to respond.</p><button class="btn" data-whatsapp-alert>Open WhatsApp draft</button></section>
+      <section class="glass-card"><h3>SMS Preview</h3><p data-sms-preview>Hi donor, urgent blood request near you. Reply if available.</p><button class="btn" data-send-test-sms>Send preview as test SMS</button></section>
+    </div>
+  </main>
+
+  <nav class="bottom-nav"><a href="index.html">Home</a><a href="find-blood.html">Find</a><a href="register.html">Donate</a><a href="dashboard.html">Profile</a></nav>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="app.js"></script>
+</body>
+</html>

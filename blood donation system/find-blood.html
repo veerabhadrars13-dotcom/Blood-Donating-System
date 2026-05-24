@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find Blood | RaktSetu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="particles"></div>
+  <header class="header">
+    <a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 7.1 5 10.7 5 15a7 7 0 0 0 14 0c0-4.3-3-7.9-7-13Z"/></svg></span>RaktSetu</a>
+    <nav class="nav"><a href="index.html">Home</a><a class="active" href="find-blood.html">Find Blood</a><a href="hospitals.html">Hospitals</a><a href="register.html">Donate</a><a href="login.html">Login</a></nav>
+    <a class="bell" href="notifications.html"><i data-lucide="bell"></i></a>
+    <button class="mobile-toggle"><i data-lucide="menu"></i></button>
+  </header>
+
+  <main class="page">
+    <div class="page-head">
+      <div><div class="eyebrow">Live availability</div><h1>Find blood now.</h1></div>
+      <div class="toolbar">
+        <span class="chip">Demo data | verify live before action</span>
+        <button class="btn gold" data-open-live><i data-lucide="external-link"></i>Official live stock</button>
+      </div>
+    </div>
+
+    <section class="map-layout">
+      <aside class="glass-card filters">
+        <h3>Filters</h3>
+        <div class="form-grid">
+          <div class="field full"><label>State</label><select data-state="#findDistrict" data-find-state><option value="">All states</option></select></div>
+          <div class="field full"><label>District / City</label><select id="findDistrict" data-find-district></select></div>
+          <div class="field full"><label>City or hospital search</label><input data-find-search placeholder="Bengaluru, Victoria, O-"></div>
+          <div class="field full"><label>Blood group</label><select data-find-blood><option>All</option><option>O-</option><option>O+</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option></select></div>
+          <label class="toggle field full"><input data-find-emergency type="checkbox"> Show only emergency needs</label>
+          <button class="btn field full" data-apply-find-filters><i data-lucide="filter"></i>Apply filters</button>
+          <button class="btn primary field full" data-request-modal>Request Blood</button>
+          <button class="btn field full" data-whatsapp-alert>Prepare WhatsApp Alert</button>
+          <button class="btn field full" data-open-live>Open e-RaktKosh Live Stock</button>
+        </div>
+      </aside>
+      <div id="map"></div>
+    </section>
+
+    <article class="glass-card" style="margin-top:18px">
+      <div class="toolbar"><h3>Blood Availability Table</h3><input data-find-table-search style="max-width:260px" placeholder="Search table"><button class="btn" data-open-live>Verify current stock</button><span class="chip" data-find-count>Loading</span></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Hospital</th><th>City</th><th>State</th><th>Blood Group</th><th>Units</th><th>Last Updated</th><th>Contact</th></tr></thead>
+          <tbody data-availability></tbody>
+        </table>
+      </div>
+    </article>
+  </main>
+
+  <div class="modal">
+    <div class="glass-card">
+      <div class="toolbar"><h3>Request Blood</h3><button class="btn" data-close-modal><i data-lucide="x"></i></button></div>
+      <div data-modal-body></div>
+    </div>
+  </div>
+
+  <nav class="bottom-nav"><a href="index.html">Home</a><a class="active" href="find-blood.html">Find</a><a href="register.html">Donate</a><a href="dashboard.html">Profile</a></nav>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="app.js"></script>
+</body>
+</html>

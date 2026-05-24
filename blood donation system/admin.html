@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hospital Portal | RaktSetu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="particles"></div>
+  <header class="header">
+    <a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 7.1 5 10.7 5 15a7 7 0 0 0 14 0c0-4.3-3-7.9-7-13Z"/></svg></span>RaktSetu</a>
+    <nav class="nav"><a href="index.html">Home</a><a href="find-blood.html">Find Blood</a><a href="hospitals.html">Hospitals</a><a href="register.html">Donate</a><a href="login.html">Login</a></nav>
+    <a class="bell" href="notifications.html"><i data-lucide="bell"></i></a>
+    <button class="mobile-toggle"><i data-lucide="menu"></i></button>
+  </header>
+
+  <main class="page">
+    <div class="page-head"><div><div class="eyebrow">Admin and hospital command</div><h1>Hospital Portal.</h1></div><span class="badge">Session timeout warning at 15 min inactivity</span></div>
+    <section class="admin-metrics">
+      <div class="metric-card"><span>Total donors</span><strong>126k</strong></div>
+      <div class="metric-card"><span>Blood stock</span><strong>9,186</strong></div>
+      <div class="metric-card"><span>Pending requests</span><strong>42</strong></div>
+      <div class="metric-card"><span>Recent donations</span><strong>316</strong></div>
+    </section>
+    <div class="grid two" style="margin-top:18px">
+      <section class="glass-card">
+        <h3>Update Blood Stock</h3>
+        <div class="form-grid">
+          <div class="field"><label>Blood group</label><select><option>O-</option><option>O+</option><option>A+</option><option>B+</option><option>AB-</option></select></div>
+          <div class="field"><label>Units</label><input type="number" value="12"></div>
+          <button class="btn primary field full" data-toast="Blood stock updated locally. Connect backend API for production audit logs.">Update stock</button>
+        </div>
+      </section>
+      <section class="glass-card">
+        <h3>Broadcast Notification</h3>
+        <div class="form-grid">
+          <div class="field"><label>Target group</label><select><option>All O- donors in district</option><option>Eligible donors within 10 km</option></select></div>
+          <div class="field"><label>Channel</label><select><option>WhatsApp + SMS</option><option>Email</option><option>Push</option></select></div>
+          <div class="field full"><label>Message</label><textarea data-admin-message>Urgent O- blood needed at AIIMS Delhi. Please respond if available.</textarea></div>
+          <button class="btn gold field full" data-admin-broadcast>Send broadcast</button>
+          <p class="chip field full" data-admin-status>Broadcast gateway not connected</p>
+        </div>
+      </section>
+    </div>
+    <section class="glass-card" style="margin-top:18px">
+      <div class="toolbar"><h3>Donor Management</h3><button class="btn" data-export-csv>Export CSV</button><button class="btn" data-export-pdf>Export PDF</button></div>
+      <div class="table-wrap"><table><thead><tr><th>Name</th><th>Blood</th><th>District</th><th>Eligibility</th><th>Last contact</th></tr></thead><tbody><tr><td>Aarav Rao</td><td>O-</td><td>South Delhi</td><td><span class="status">Eligible</span></td><td>WhatsApp pending gateway</td></tr><tr><td>Meera Iyer</td><td>A+</td><td>Chennai</td><td><span class="status red">Deferred</span></td><td>Email service required</td></tr></tbody></table></div>
+    </section>
+  </main>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="app.js"></script>
+</body>
+</html>

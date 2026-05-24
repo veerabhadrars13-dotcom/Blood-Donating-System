@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register | RaktSetu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="particles"></div>
+  <header class="header"><a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 7.1 5 10.7 5 15a7 7 0 0 0 14 0c0-4.3-3-7.9-7-13Z"/></svg></span>RaktSetu</a><nav class="nav"><a href="index.html">Home</a><a href="find-blood.html">Find Blood</a><a href="hospitals.html">Hospitals</a><a class="active" href="register.html">Donate</a><a href="login.html">Login</a></nav><a class="bell" href="notifications.html"><i data-lucide="bell"></i></a><button class="mobile-toggle"><i data-lucide="menu"></i></button></header>
+  <main class="page">
+    <div class="page-head"><div><div class="eyebrow">Verified donor onboarding</div><h1>Register to save lives.</h1></div><span class="badge">256-bit encrypted | HIPAA compliant</span></div>
+    <form class="glass-card" data-register>
+      <div class="steps"><div class="step-pill active">1 Personal</div><div class="step-pill">2 Verify</div><div class="step-pill">3 Health</div><div class="step-pill">4 Confirm</div></div>
+      <section class="form-step active">
+        <div class="form-grid">
+          <div class="field"><label>Full name</label><input name="fullName" required></div>
+          <div class="field"><label>Date of birth</label><input name="dob" type="date" required></div>
+          <div class="field full"><label>Blood group</label><div class="blood-options"><label class="blood-chip"><input type="radio" name="bloodGroup" value="A+">A+</label><label class="blood-chip"><input type="radio" name="bloodGroup" value="A-">A-</label><label class="blood-chip"><input type="radio" name="bloodGroup" value="B+">B+</label><label class="blood-chip"><input type="radio" name="bloodGroup" value="B-">B-</label><label class="blood-chip"><input type="radio" name="bloodGroup" value="O+">O+</label><label class="blood-chip"><input type="radio" name="bloodGroup" value="O-">O-</label><label class="blood-chip"><input type="radio" name="bloodGroup" value="AB+">AB+</label><label class="blood-chip"><input type="radio" name="bloodGroup" value="AB-">AB-</label></div></div>
+          <div class="field"><label>Gender</label><select name="gender"><option>Female</option><option>Male</option><option>Non-binary</option><option>Prefer not to say</option></select></div>
+        </div>
+        <div class="actions"><button type="button" class="btn primary" data-next>Continue</button><button type="button" class="btn"><i data-lucide="chrome"></i>Google Sign-In</button></div>
+      </section>
+      <section class="form-step">
+        <div class="form-grid">
+          <div class="field"><label>Email</label><input name="email" type="email" required></div>
+          <div class="field"><label>Mobile number</label><input name="mobile" type="tel" placeholder="+91"></div>
+          <div class="field full"><label>OTP sent by SMS <span data-otp-timer>60s</span></label><div class="otp-row"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"></div></div>
+          <div class="field"><label>Password</label><input type="password"><div class="strength"><span></span></div></div>
+          <div class="field"><label>Confirm password</label><input type="password"></div>
+        </div>
+        <div class="actions"><button type="button" class="btn" data-prev>Back</button><button type="button" class="btn primary" data-next>Verify and continue</button><button type="button" class="btn" data-toast="OTP resent to your mobile number.">Resend OTP</button></div>
+      </section>
+      <section class="form-step">
+        <div class="form-grid">
+          <div class="field"><label>State</label><select name="state" data-state="#regDistrict"><option value="">Select state</option></select></div>
+          <div class="field"><label>District</label><select name="district" id="regDistrict"></select></div>
+          <div class="field"><label>City</label><input name="city"></div>
+          <div class="field"><label>Last donation date</label><input name="lastDonation" type="date"></div>
+          <div class="field full"><label>Medical conditions</label><div class="grid three check-list"><label><input type="checkbox"> Diabetes</label><label><input type="checkbox"> Hypertension</label><label><input type="checkbox"> Recent surgery</label><label><input type="checkbox"> Anemia</label><label><input type="checkbox"> Medication</label><label><input type="checkbox"> None</label></div></div>
+          <div class="field full"><label>Upload ID proof Aadhaar/PAN</label><input type="file"></div>
+          <label class="field full toggle"><input type="checkbox" required> I consent to DPDP/GDPR aligned processing of my health and contact data.</label>
+        </div>
+        <div class="actions"><button type="button" class="btn" data-prev>Back</button><button type="button" class="btn primary" data-next>Review</button></div>
+      </section>
+      <section class="form-step">
+        <div class="grid two" data-summary></div>
+        <div class="security-strip"><span class="chip">JWT refresh tokens</span><span class="chip">CSRF protected forms</span><span class="chip">Rate-limited login</span></div>
+        <div class="actions"><button type="button" class="btn" data-prev>Back</button><button class="btn primary" type="submit"><i data-lucide="check-circle"></i>Complete registration</button></div>
+      </section>
+    </form>
+  </main>
+  <nav class="bottom-nav"><a href="index.html">Home</a><a href="find-blood.html">Find</a><a class="active" href="register.html">Donate</a><a href="dashboard.html">Profile</a></nav>
+  <script src="https://unpkg.com/lucide@latest"></script><script src="app.js"></script>
+</body>
+</html>

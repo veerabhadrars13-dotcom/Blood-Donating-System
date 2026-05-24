@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hospitals | RaktSetu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="particles"></div>
+  <header class="header">
+    <a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 7.1 5 10.7 5 15a7 7 0 0 0 14 0c0-4.3-3-7.9-7-13Z"/></svg></span>RaktSetu</a>
+    <nav class="nav"><a href="index.html">Home</a><a href="find-blood.html">Find Blood</a><a class="active" href="hospitals.html">Hospitals</a><a href="register.html">Donate</a><a href="login.html">Login</a></nav>
+    <a class="bell" href="notifications.html"><i data-lucide="bell"></i></a>
+    <button class="mobile-toggle"><i data-lucide="menu"></i></button>
+  </header>
+
+  <main class="page">
+    <div class="page-head">
+      <div><div class="eyebrow">Verified network</div><h1>Hospitals Directory.</h1></div>
+      <div class="segment"><button class="active" data-hospital-view="list">List</button><button data-hospital-view="map">Map</button></div>
+    </div>
+
+    <section class="glass-card">
+      <div class="form-grid">
+        <div class="field"><label>Search hospital/city</label><input data-hospital-search placeholder="Try Bengaluru, Mysuru, KIMS"></div>
+        <div class="field"><label>State</label><select data-state="#hospitalDistrict" data-hospital-state><option value="">All states</option></select></div>
+        <div class="field"><label>District / City</label><select id="hospitalDistrict" data-hospital-district></select></div>
+        <div class="field"><label>Type</label><select data-hospital-type><option>All</option><option>Government</option><option>Private</option><option>Trust</option></select></div>
+        <div class="field"><label>Blood group</label><select data-hospital-blood><option>All</option><option>O-</option><option>O+</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option></select></div>
+        <label class="toggle"><input data-hospital-open type="checkbox" checked> Blood bank available</label>
+      </div>
+      <div class="toolbar" style="margin-top:14px">
+        <button class="btn primary" data-apply-hospital-filters><i data-lucide="filter"></i>Apply filters</button>
+        <button class="btn" data-clear-hospital-filters>Clear</button>
+        <span class="chip" data-hospital-count>Loading hospitals</span>
+      </div>
+    </section>
+
+    <section class="grid three" style="margin-top:18px" data-hospitals></section>
+  </main>
+
+  <div class="modal">
+    <div class="glass-card">
+      <div class="toolbar"><h3>Hospital Profile</h3><button class="btn" data-close-modal><i data-lucide="x"></i></button></div>
+      <div data-modal-body></div>
+    </div>
+  </div>
+
+  <nav class="bottom-nav"><a href="index.html">Home</a><a href="find-blood.html">Find</a><a href="register.html">Donate</a><a href="dashboard.html">Profile</a></nav>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="app.js"></script>
+</body>
+</html>
